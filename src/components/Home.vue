@@ -9,7 +9,7 @@
             class="imagesList"
             lazy-src="https://picsum.photos/id/11/10/6"
             :src="img.download_url"
-            v-on:click="showAuthor(img.author)"
+            v-on:click="alertImage(img.author)"
           >
           </v-img>
           <h1 class="text-card">{{ img.author }}</h1>
@@ -51,8 +51,8 @@ export default {
     };
   },
   methods: {
-    showAuthor(someArgument) {
-    ipcRenderer.invoke('login', someArgument).then((result) => {
+    alertImage(someArgument) {
+    ipcRenderer.invoke('alertImage', someArgument).then((result) => {
       alert(result)
      
 })

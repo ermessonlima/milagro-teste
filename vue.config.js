@@ -1,12 +1,11 @@
 module.exports = {
-  configureWebpack: {
-    externals: {
-      sequelize: "require('sequelize')",
-    },
-  },
+  transpileDependencies: [
+    'vuetify'
+  ],
   pluginOptions: {
     electronBuilder: {
-      externals: ['sequelize'],
+      nodeIntegration: true,
+      builderOptions: { publish: [{ provider: "github", owner: "Ermesson Lima", private: false }] }
     }
-  },
+  }
 }
