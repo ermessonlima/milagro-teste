@@ -1,9 +1,9 @@
 'use strict'
 
-import { app, protocol, BrowserWindow, ipcMain } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain , mainWindow} from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
-import { autoUpdater } from "electron-updater"
+const { autoUpdater } = require('electron-updater');
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 import{ ipc } from './components/services';
@@ -52,7 +52,9 @@ ipcMain.on('asynchronous-message', (event, args) => {
   event.returnValue= args;
 })
 
-
+mainWindow.on('ready-to-show', () => {
+  autoUpdater.checkForUpdatesAndNotify();
+});
 
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();

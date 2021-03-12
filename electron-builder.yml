@@ -1,4 +1,4 @@
 appId: com.milagro.ElectronAutoUpdate
 publish:
   provider: github
-  token: c4c138f44db094bf82e5fa68a62a0101ce3f6740
+  token: a10aa2430f545e12178697ecbd7139e0417c191a
