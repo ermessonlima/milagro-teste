@@ -26,8 +26,8 @@ Eu dou as boas-vindas a cada um de vocês.
 Para instalar este projeto de exemplo, execute os seguintes comandos:
 
 ```bash
-git clone https://github.com/ermessonlima/Luby-Test.git
-cd Luby-Test
+git clone https://github.com/ermessonlima/milagro-teste.git
+cd milagro-teste
 yarn install
 ```
 Isso fará com que uma cópia do projeto seja instalada localmente.
@@ -68,8 +68,8 @@ I welcome each and everyone of you.
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/ermessonlima/Luby-Test.git
-cd Luby-Test
+git clone https://github.com/ermessonlima/milagro-teste.git
+cd milagro-teste
 yarn install
 ```
 This will get a copy of the project installed locally.
